@@ -1,0 +1,6 @@
+assignmentResults
+.idea
+bin
+obj
+*.fsproj
+*.sln
