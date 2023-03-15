@@ -80,4 +80,16 @@ let fibA x =
 
     fibonacci x (x - 1) 0
 
-fibA 10
+fibA 10 // 55
+fibA 40 // 102334155
+
+let fibC x =
+    let rec fibonacci x c =
+        match x with
+        | x when x = 1 -> c x
+        | x -> x + fibonacci (x - 1) (fun r -> c r)
+
+    fibonacci x (fun x -> x + x - 1)
+
+fibC 10 // 55
+fibC 40 // 102334155
